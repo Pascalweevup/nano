@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KPMG — Séminaire Financier — Comparateur Budget</title>
-    <meta name="description" content="Comparateur interactif de propositions pour le séminaire financier KPMG">
+    <title>NANO AVIONICS — Hotel Gaillard — Budget Comparator</title>
+    <meta name="description" content="Printable budget comparator for Nano Avionics event at Hotel Gaillard">
 
     <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -109,56 +109,193 @@
 
         // --- DATA EXTRACTED FROM PDF ---
         const budgetData = {
-            "proposition": {
-                "id": "proposition",
-                "name": "KPMG - Cinquième Sens",
-                "totalTTC": 3852.50,
-                "totalHT": 3210.42,
-                "honorairesHT": 152.88,
-                "paxCount": 50,
+            "hotel_gaillard": {
+                "id": "hotel_gaillard",
+                "name": "Hotel Gaillard - Sept 14-15, 2026",
+                "totalTTC": 119518.74,
+                "totalHT": 99598.95,
+                "honorairesHT": 9054.45,
+                "paxCount": 150,
                 "categories": {
-                    "lieux": 1469.94,
-                    "reunions": 1587.60,
-                    "extras": 0.0,
-                    "accompagnement": 0.0
+                    "venue": 22821.00,
+                    "fb": 20527.50,
+                    "animations": 8976.00,
+                    "technical": 31200.00,
+                    "experience": 3800.00,
+                    "support": 3220.00
                 },
                 "details": {
-                    "lieux": [
+                    "venue": [
                         {
-                            "desc": "Location de salle - Cœur Défense",
-                            "price": 1469.94,
-                            "tva": 293.99,
-                            "ttc": 1763.93,
-                            "subDesc": "Accessibilité PMR\nPrivatisation d'une salle 110m², matériel audiovisuel inclus\n<span class='bg-yellow-100 px-1 font-bold text-gray-900 rounded'>Remises de 330€</span> - 1h d'exploitation offerte (1469.94€ au lieu de 1799.94€)"
+                            "desc": "Rooftop Malesherbes - Venue Rental (19:00 - 00:00)",
+                            "price": 15525.00,
+                            "tva": 3105.00,
+                            "ttc": 18630.00,
+                            "subDesc": "Includes 2h setup (17:00-19:00) and 1h teardown (00:00-01:00)"
+                        },
+                        {
+                            "desc": "Welcome Hostesses & Cloakroom Staff (19:00 - 00:00)",
+                            "price": 1080.00,
+                            "tva": 216.00,
+                            "ttc": 1296.00,
+                            "subDesc": "3 staff members"
+                        },
+                        {
+                            "desc": "Cloakroom Equipment",
+                            "price": 540.00,
+                            "tva": 108.00,
+                            "ttc": 648.00,
+                            "subDesc": "Partitions, racks, hangers, tickets"
+                        },
+                        {
+                            "desc": "Security Guards (19:00 - 00:00)",
+                            "price": 1440.00,
+                            "tva": 288.00,
+                            "ttc": 1728.00,
+                            "subDesc": "4 security personnel"
+                        },
+                        {
+                            "desc": "Venue Manager / Stage Manager",
+                            "price": 600.00,
+                            "tva": 120.00,
+                            "ttc": 720.00,
+                            "subDesc": "1 person"
+                        },
+                        {
+                            "desc": "Basic Technical Package + DJ Booth",
+                            "price": 2268.00,
+                            "tva": 453.60,
+                            "ttc": 2721.60
+                        },
+                        {
+                            "desc": "Additional Setup Hours",
+                            "price": 600.00,
+                            "tva": 120.00,
+                            "ttc": 720.00,
+                            "subDesc": "2 hours"
+                        },
+                        {
+                            "desc": "Additional Teardown Hours",
+                            "price": 768.00,
+                            "tva": 153.60,
+                            "ttc": 921.60,
+                            "subDesc": "2 hours"
                         }
                     ],
-                    "reunions": [
+                    "fb": [
                         {
-                            "desc": "Atelier Création de parfum - 2h00",
-                            "price": 1587.60,
-                            "tva": 317.52,
-                            "ttc": 1905.12,
-                            "subDesc": "2 Animateurs parfumeurs pour 50 pax\nFormat : 2h00\nDéplacement dans le lieux de votre choix\n<span class='bg-yellow-100 px-1 font-bold text-gray-900 rounded'>Remise de 30€</span> - <span class='bg-yellow-100 px-1 font-bold text-gray-900 rounded'>Une réduction de 10% (rétroactive)</span> à partir de la 5ème opération réalisée avec Cinquième Sens sur les trois prochaines années"
-                        }
-                    ],
-                    "extras": [
-                        {
-                            "desc": "Flacon vaporisateur 15 ml",
-                            "price": 1430.00,
-                            "tva": 286.00,
-                            "ttc": 1716.00,
+                            "desc": "Champagne Package (Pommery Apanage)",
+                            "price": 2242.50,
+                            "tva": 448.50,
+                            "ttc": 2691.00,
                             "isOption": true,
-                            "subDesc": "50 unités — 28,60 € / unité\nLivraison des flacons dans vos locaux sous 8 jours inclus"
+                            "subDesc": "Base: 1 bottle for 5 persons. 150 pax"
+                        },
+                        {
+                            "desc": "20-Piece Dinner Cocktail - Kaspia Reception",
+                            "price": 20527.50,
+                            "tva": 4105.50,
+                            "ttc": 24633.00,
+                            "subDesc": "Includes live cooking station, soft drinks, wines, staff, and service equipment. 150 pax"
                         }
                     ],
-                    "accompagnement": [
+                    "animations": [
                         {
-                            "desc": "Weever - forfait 1/2 journée",
+                            "desc": "DJ Performance",
+                            "price": 1080.00,
+                            "tva": 216.00,
+                            "ttc": 1296.00
+                        },
+                        {
+                            "desc": "Cocktail Bar with Mixologists",
+                            "price": 4896.00,
+                            "tva": 979.20,
+                            "ttc": 5875.20,
+                            "subDesc": "2 cocktails per person, personalized bar and recipes"
+                        },
+                        {
+                            "desc": "Glambot",
+                            "price": 2400.00,
+                            "tva": 480.00,
+                            "ttc": 2880.00
+                        },
+                        {
+                            "desc": "Mission Data Game",
+                            "price": 600.00,
+                            "tva": 120.00,
+                            "ttc": 720.00
+                        },
+                        {
+                            "desc": "Dance Show",
+                            "price": 18000.00,
+                            "tva": 3600.00,
+                            "ttc": 21600.00,
+                            "isOption": true
+                        }
+                    ],
+                    "technical": [
+                        {
+                            "desc": "Full Technical Setup (TV Screens, Sound, Projection, Lighting)",
+                            "price": 18000.00,
+                            "tva": 3600.00,
+                            "ttc": 21600.00
+                        },
+                        {
+                            "desc": "3D Display Cases",
+                            "price": 12240.00,
+                            "tva": 2448.00,
+                            "ttc": 14688.00,
+                            "subDesc": "2 units"
+                        },
+                        {
+                            "desc": "Planets",
+                            "price": 960.00,
+                            "tva": 192.00,
+                            "ttc": 1152.00
+                        }
+                    ],
+                    "experience": [
+                        {
+                            "desc": "Event Theme & Visual Identity (Fil Rouge)",
+                            "price": 1200.00,
+                            "tva": 240.00,
+                            "ttc": 1440.00
+                        },
+                        {
+                            "desc": "Visual Creations",
+                            "price": 600.00,
+                            "tva": 120.00,
+                            "ttc": 720.00
+                        },
+                        {
+                            "desc": "Digital Registration & Badges",
+                            "price": 2000.00,
+                            "tva": 400.00,
+                            "ttc": 2400.00,
+                            "subDesc": "Registration site, listing/mailing, check-in scanner, badge printing"
+                        }
+                    ],
+                    "support": [
+                        {
+                            "desc": "Weever Package",
+                            "price": 2700.00,
+                            "tva": 540.00,
+                            "ttc": 3240.00,
+                            "subDesc": "3 staff members for the event"
+                        },
+                        {
+                            "desc": "Travel & Meals (VHR)",
+                            "price": 120.00,
+                            "tva": 24.00,
+                            "ttc": 144.00,
+                            "subDesc": "3 staff members"
+                        },
+                        {
+                            "desc": "Site Visit / Scouting",
                             "price": 400.00,
                             "tva": 80.00,
                             "ttc": 480.00,
-                            "isOption": true,
-                            "subDesc": "Accompagnement sur place"
+                            "subDesc": "1 staff member"
                         }
                     ]
                 }
@@ -166,22 +303,26 @@
         };
 
         const categoryLabels = {
-            "lieux": "Lieu & Salle",
-            "reunions": "Activité Création",
-            "extras": "Options Cadeaux",
-            "accompagnement": "Accompagnement"
+            "venue": "Venue & Logistics",
+            "fb": "Food & Beverage",
+            "animations": "Animations",
+            "technical": "Technical & Ambience",
+            "experience": "Experience",
+            "support": "Weevup Support"
         };
 
         const categoryColors = {
-            "lieux": "bg-blue-500",
-            "reunions": "bg-purple-500",
-            "extras": "bg-orange-500",
-            "accompagnement": "bg-teal-500"
+            "venue": "bg-blue-600",
+            "fb": "bg-emerald-600",
+            "animations": "bg-purple-600",
+            "technical": "bg-indigo-600",
+            "experience": "bg-amber-600",
+            "support": "bg-rose-600"
         };
 
         // --- UTILS ---
         const formatEur = (value) => {
-            return new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(value);
+            return new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'EUR' }).format(value);
         };
 
         // --- COMPONENTS ---
@@ -201,12 +342,12 @@
                                 <div key={venue.id} className="relative bg-white rounded-xl shadow-sm border border-gray-200 p-6">
                                     <h3 className="text-lg font-semibold text-gray-900 mb-4">{venue.name}</h3>
                                     <div className="mb-2">
-                                        <p className="text-sm text-gray-500 uppercase tracking-wide">Budget Total HT</p>
+                                        <p className="text-sm text-gray-500 uppercase tracking-wide">Total Budget (Excl. VAT)</p>
                                         <p className="text-3xl font-bold text-gray-900">{formatEur(venue.totalHT)}</p>
                                     </div>
                                     <div className="flex justify-between text-sm text-gray-500 mt-4 pt-4 border-t border-gray-100">
-                                        <span>Total TTC: {formatEur(venue.totalTTC)}</span>
-                                        <span className="font-semibold text-sky-600">{formatEur(venue.totalHT / venue.paxCount)} HT / pers.</span>
+                                        <span>Total (Incl. VAT): {formatEur(venue.totalTTC)}</span>
+                                        <span className="font-semibold text-sky-600">{formatEur(venue.totalHT / venue.paxCount)} Excl. VAT / pers.</span>
                                     </div>
                                 </div>
                             );
@@ -214,13 +355,13 @@
                     </div>
 
                     <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-                        <h3 className="text-lg font-semibold text-gray-900 mb-6">Répartition par catégorie (HT)</h3>
+                        <h3 className="text-lg font-semibold text-gray-900 mb-6">Breakdown by Category (Excl. VAT)</h3>
                         <div className="space-y-6">
                             {venues.map(venue => (
                                 <div key={venue.id}>
                                     <div className="flex justify-between text-sm font-medium mb-2">
                                         <span>{venue.name}</span>
-                                        <span>{formatEur(venue.totalHT - venue.honorairesHT)} HT <span className="text-gray-400 font-normal">(hors honoraires)</span></span>
+                                        <span>{formatEur(venue.totalHT - venue.honorairesHT)} Excl. VAT <span className="text-gray-400 font-normal">(before fees)</span></span>
                                     </div>
                                     <div className="h-6 w-full bg-gray-100 rounded-full overflow-hidden flex">
                                         {Object.entries(venue.categories).map(([catKey, catValue]) => {
@@ -245,10 +386,10 @@
                             <table className="min-w-full divide-y divide-gray-200 text-sm">
                                 <thead className="bg-gray-50">
                                     <tr>
-                                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Poste de Dépense</th>
-                                        <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">Montant HT</th>
-                                        <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">TVA (20%)</th>
-                                        <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">Montant TTC</th>
+                                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Expense Item</th>
+                                        <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">Amount (Excl. VAT)</th>
+                                        <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">VAT (20%)</th>
+                                        <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">Amount (Incl. VAT)</th>
                                     </tr>
                                 </thead>
                                 <tbody className="bg-white divide-y divide-gray-200">
@@ -269,21 +410,21 @@
                                     })}
 
                                     <tr className="bg-gray-50 border-t-2 border-gray-200">
-                                        <td className="px-6 py-4 whitespace-nowrap font-medium text-gray-900">Honoraires Agence (5%)</td>
+                                        <td className="px-6 py-4 whitespace-nowrap font-medium text-gray-900">Agency Fees (10%)</td>
                                         <td className="px-6 py-4 whitespace-nowrap text-right text-gray-600">{formatEur(venues[0].honorairesHT)}</td>
                                         <td className="px-6 py-4 whitespace-nowrap text-right text-gray-600">{formatEur(venues[0].honorairesHT * 0.2)}</td>
                                         <td className="px-6 py-4 whitespace-nowrap text-right text-gray-600">{formatEur(venues[0].honorairesHT * 1.2)}</td>
                                     </tr>
 
                                     <tr className="bg-sky-50 border-t border-sky-200">
-                                        <td className="px-6 py-4 whitespace-nowrap font-bold text-sky-900 uppercase tracking-wider">Total Final</td>
+                                        <td className="px-6 py-4 whitespace-nowrap font-bold text-sky-900 uppercase tracking-wider">Grand Total</td>
                                         <td className="px-6 py-4 whitespace-nowrap text-right font-bold text-lg text-sky-900">{formatEur(venues[0].totalHT)}</td>
                                         <td className="px-6 py-4 whitespace-nowrap text-right font-bold text-lg text-sky-900">{formatEur(venues[0].totalTTC - venues[0].totalHT)}</td>
                                         <td className="px-6 py-4 whitespace-nowrap text-right font-bold text-lg text-sky-900">{formatEur(venues[0].totalTTC)}</td>
                                     </tr>
                                     
                                     <tr className="bg-sky-50/50">
-                                        <td className="px-6 py-3 whitespace-nowrap text-sm font-semibold text-sky-700">Prix par personne HT (50 pers.)</td>
+                                        <td className="px-6 py-3 whitespace-nowrap text-sm font-semibold text-sky-700">Price per person (Excl. VAT) ({venues[0].paxCount} pax)</td>
                                         <td colSpan="3" className="px-6 py-3 whitespace-nowrap text-right text-sm font-semibold text-sky-700">
                                             {formatEur(venues[0].totalHT / venues[0].paxCount)}
                                         </td>
@@ -305,12 +446,12 @@
                     <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                         <div>
                             <h2 className="text-2xl font-bold text-gray-900">{venue.name}</h2>
-                            <p className="text-gray-500">Détail du devis estimatif</p>
+                            <p className="text-gray-500">Detailed estimated quote</p>
                         </div>
                         <div className="text-right bg-sky-50 p-4 rounded-lg border border-sky-100">
-                            <p className="text-sm font-medium text-sky-600 uppercase tracking-wider mb-1">Total HT</p>
+                            <p className="text-sm font-medium text-sky-600 uppercase tracking-wider mb-1">Total (Excl. VAT)</p>
                             <p className="text-3xl font-bold text-sky-900">{formatEur(venue.totalHT)}</p>
-                            <p className="text-xs text-sky-500 mt-1">Total TTC: {formatEur(venue.totalTTC)}</p>
+                            <p className="text-xs text-sky-500 mt-1">Total (Incl. VAT): {formatEur(venue.totalTTC)}</p>
                         </div>
                     </div>
 
@@ -334,7 +475,7 @@
                                             </div>
                                             <div className="text-right">
                                                 <p className="text-lg font-bold text-gray-900">{formatEur(catValue)}</p>
-                                                <p className="text-xs text-gray-500">HT</p>
+                                                <p className="text-xs text-gray-500">Excl. VAT</p>
                                             </div>
                                         </div>
 
@@ -349,7 +490,7 @@
                                                             </span>
                                                             <div className="text-right">
                                                                 <span className="text-gray-900 font-bold whitespace-nowrap block">{formatEur(item.price)} HT</span>
-                                                                <span className="text-gray-400 text-[10px] block">TVA (20%): {formatEur(item.tva)}</span>
+                                                                <span className="text-gray-400 text-[10px] block">VAT (20%): {formatEur(item.tva)}</span>
                                                             </div>
                                                         </div>
                                                         {item.subDesc && (
@@ -366,45 +507,45 @@
 
                             <div className="bg-gray-50 rounded-lg border border-gray-200 p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                                 <div>
-                                    <h4 className="font-semibold text-gray-900">Honoraires Agence (5%)</h4>
-                                    <p className="text-sm text-gray-500">Calculés sur le sous-total HT</p>
+                                    <h4 className="font-semibold text-gray-900">Agency Fees (10%)</h4>
+                                    <p className="text-sm text-gray-500">Calculated on the subtotal (Excl. VAT)</p>
                                 </div>
                                 <div className="text-right">
                                     <p className="text-lg font-bold text-gray-900">{formatEur(venue.honorairesHT)}</p>
-                                    <p className="text-xs text-gray-500">HT</p>
+                                    <p className="text-xs text-gray-500">Excl. VAT</p>
                                 </div>
                             </div>
                         </div>
 
                         <div className="lg:col-span-1">
                             <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 sticky top-24">
-                                <h3 className="text-lg font-semibold text-gray-900 mb-4 border-b pb-2">Récapitulatif Financier</h3>
+                                <h3 className="text-lg font-semibold text-gray-900 mb-4 border-b pb-2">Financial Summary</h3>
                                 <div className="space-y-3 text-sm">
                                     <div className="flex justify-between text-gray-600">
-                                        <span>Sous-total HT</span>
+                                        <span>Subtotal (Excl. VAT)</span>
                                         <span>{formatEur(subtotalHT)}</span>
                                     </div>
                                     <div className="flex justify-between text-gray-600">
-                                        <span>Honoraires HT (5%)</span>
+                                        <span>Agency Fees (10%)</span>
                                         <span>{formatEur(venue.honorairesHT)}</span>
                                     </div>
                                     <div className="border-t pt-3 flex justify-between text-gray-500 text-sm">
-                                        <span>TVA Totale (20%)</span>
+                                        <span>Total VAT (20%)</span>
                                         <span>{formatEur(venue.totalTTC - venue.totalHT)}</span>
                                     </div>
                                     <div className="flex justify-between text-gray-500 text-sm">
-                                        <span>Total TTC</span>
+                                        <span>Total (Incl. VAT)</span>
                                         <span>{formatEur(venue.totalTTC)}</span>
                                     </div>
                                     <div className="border-t pt-3 mt-2 flex justify-between font-bold text-sky-600 text-lg">
-                                        <span>Total HT</span>
+                                        <span>Total (Excl. VAT)</span>
                                         <span>{formatEur(venue.totalHT)}</span>
                                     </div>
                                     <div className="border-t pt-3 mt-2 flex justify-between font-bold text-emerald-600 text-base">
-                                        <span>Prix / personne HT</span>
+                                        <span>Price / person (Excl. VAT)</span>
                                         <span>{formatEur(venue.totalHT / venue.paxCount)}</span>
                                     </div>
-                                    <p className="text-xs text-gray-400 text-right">Base {venue.paxCount} personnes</p>
+                                    <p className="text-xs text-gray-400 text-right">Based on {venue.paxCount} guests</p>
                                 </div>
                             </div>
                         </div>
@@ -419,9 +560,9 @@
                     <div className="print-section">
                         <header className="bg-white shadow-sm border-b border-gray-200 mb-8 p-4">
                             <h1 className="text-2xl font-bold text-gray-900 flex items-center gap-2">
-                                KPMG — Séminaire Financier
+                                NANO AVIONICS — Hotel Gaillard
                             </h1>
-                            <p className="text-sm text-gray-500">Proposition événementielle — Cinquième Sens & Cœur Défense</p>
+                            <p className="text-sm text-gray-500">Interactive budget comparator for the upcoming event</p>
                         </header>
                         <main className="max-w-7xl mx-auto px-4">
                             <ComparisonView />
