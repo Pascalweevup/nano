@@ -240,7 +240,6 @@ const ComparisonView = () => {
                             </div>
                             <div className="flex justify-between text-sm text-gray-500 mt-4 pt-4 border-t border-gray-100">
                                 <span>Total (Incl. VAT): {formatEur(venue.totalTTC)}</span>
-                                <span className="font-semibold text-sky-600">{formatEur(venue.totalHT / venue.paxCount)} Excl. VAT / pers.</span>
                             </div>
                         </div>
                     );
@@ -328,12 +327,7 @@ const ComparisonView = () => {
                                 <td className="px-6 py-4 whitespace-nowrap text-right font-bold text-lg text-sky-900">{formatEur(venues[0].totalTTC)}</td>
                             </tr>
                             
-                            <tr className="bg-sky-50/50">
-                                <td className="px-6 py-3 whitespace-nowrap text-sm font-semibold text-sky-700">Price per person (Excl. VAT) ({venues[0].paxCount} pax)</td>
-                                <td colSpan="3" className="px-6 py-3 whitespace-nowrap text-right text-sm font-semibold text-sky-700">
-                                    {formatEur(venues[0].totalHT / venues[0].paxCount)}
-                                </td>
-                            </tr>
+
                         </tbody>
                     </table>
                 </div>
@@ -446,11 +440,7 @@ const VenueDetailView = ({ venueId }) => {
                                 <span>Total (Excl. VAT)</span>
                                 <span>{formatEur(venue.totalHT)}</span>
                             </div>
-                            <div className="border-t pt-3 mt-2 flex justify-between font-bold text-emerald-600 text-base">
-                                <span>Price / person (Excl. VAT)</span>
-                                <span>{formatEur(venue.totalHT / venue.paxCount)}</span>
-                            </div>
-                            <p className="text-xs text-gray-400 text-right">Based on {venue.paxCount} guests</p>
+
                         </div>
                     </div>
                 </div>
@@ -471,7 +461,7 @@ export default function App() {
                             <h1 className="text-2xl font-bold text-gray-900 flex items-center gap-2">
                                 NANO AVIONICS — Hotel Gaillard
                             </h1>
-                            <p className="text-sm text-gray-500">Interactive budget comparator for the upcoming event</p>
+
                         </div>
                         <div className="flex space-x-1 bg-gray-100 p-1 rounded-lg overflow-x-auto">
                             <button
